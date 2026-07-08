@@ -59,8 +59,9 @@
   .hero-role{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,2.2vw,26px);color:#b9c4be;margin-bottom:34px}
   .hero-sub{font-size:15.5px;line-height:1.75;color:#a7ada9;max-width:520px;margin-bottom:42px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:70px}
-  .portrait{align-self:stretch;display:flex;align-items:flex-end;justify-content:center}
-  .portrait-box{width:100%;max-width:340px;height:420px;background:linear-gradient(180deg,#1d2724,#10201a);border:1px solid var(--line-d);border-bottom:none;display:flex;align-items:center;justify-content:center;color:#5f6a65;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-align:center;line-height:2}
+  .portrait{align-self:center;display:flex;align-items:center;justify-content:center;padding-bottom:70px}
+  .portrait-box{width:340px;height:340px;border-radius:50%;overflow:hidden;border:1px solid var(--line-d);box-shadow:0 0 0 12px rgba(64,145,108,.08),0 0 0 1px rgba(64,145,108,.35),0 30px 60px rgba(0,0,0,.45);background:#1d2724}
+  .portrait-box img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
   .hero-band{position:relative;z-index:2;border-top:1px solid var(--line-d)}
   .hero-band::before{content:"";position:absolute;top:-1px;left:0;width:180px;height:2px;background:var(--green-l)}
   .band-in{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding:30px 0}
@@ -153,7 +154,7 @@
       </div>
     </div>
     <div class="portrait">
-      <div class="portrait-box">Foto profesional<br>Andrés Torres-Calderón</div>
+      <div class="portrait-box"><img src="/andres-torres-calderon.jpg" alt="Andrés Torres-Calderón" /></div>
     </div>
   </div>
   <div class="wrap hero-band">
