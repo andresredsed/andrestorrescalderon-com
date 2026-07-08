@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andrés Torres-Calderón — Banca de Inversión & M&A | Perú</title>
+<meta name="description" content="Fundador de Alto Capitals y Alto Negocios. Banca de inversión, compra y venta de empresas y financiamiento alternativo para Pymes en Perú y Latinoamérica.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dark:#0F1413;
+    --dark2:#151B19;
+    --paper:#FAFAF8;
+    --card:#F4F5F2;
+    --ink:#1A1D1C;
+    --body:#4A4D4C;
+    --muted:#7A7D7C;
+    --green:#1B4332;
+    --green-m:#2D6A4F;
+    --green-l:#40916C;
+    --line-l:#E3E5E1;
+    --line-d:rgba(255,255,255,.09);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Montserrat',sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 32px}
+  .serif{font-family:'Cormorant Garamond',serif}
+
+  .label{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;color:var(--green-m)}
+  .label::before{content:"";width:8px;height:8px;background:var(--green)}
+  .label.light{color:#9fb8ab}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(15,20,19,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-d)}
+  .nav-in{height:66px;display:flex;align-items:center;justify-content:space-between}
+  .mark{color:#fff;font-weight:700;font-size:15px;letter-spacing:2.5px;text-transform:uppercase}
+  .mark span{color:var(--green-l)}
+  .nav-links{display:flex;gap:30px;font-size:13px;font-weight:500;color:#c4cac6}
+  .nav-links a:hover{color:#fff}
+  .btn{display:inline-block;padding:12px 26px;font-size:13px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;transition:.25s;cursor:pointer}
+  .btn-solid{background:#fff;color:var(--dark)}
+  .btn-solid:hover{background:var(--green-l);color:#fff}
+  .btn-line{border:1px solid rgba(255,255,255,.3);color:#fff}
+  .btn-line:hover{border-color:var(--green-l);color:var(--green-l)}
+  .btn-dark{background:var(--dark);color:#fff}
+  .btn-dark:hover{background:var(--green)}
+
+  /* HERO */
+  header{background:var(--dark);color:#fff;padding:180px 0 0;position:relative;overflow:hidden}
+  header::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(700px 380px at 82% 20%,rgba(64,145,108,.14),transparent),
+    radial-gradient(400px 300px at 8% 90%,rgba(27,67,50,.35),transparent)}
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:end}
+  h1{font-size:clamp(42px,5.6vw,72px);font-weight:300;line-height:1.05;letter-spacing:-1px;margin:26px 0 8px}
+  h1 b{font-weight:700;display:block}
+  .hero-role{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,2.2vw,26px);color:#b9c4be;margin-bottom:34px}
+  .hero-sub{font-size:15.5px;line-height:1.75;color:#a7ada9;max-width:520px;margin-bottom:42px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:70px}
+  .portrait{align-self:stretch;display:flex;align-items:flex-end;justify-content:center}
+  .portrait-box{width:100%;max-width:340px;height:420px;background:linear-gradient(180deg,#1d2724,#10201a);border:1px solid var(--line-d);border-bottom:none;display:flex;align-items:center;justify-content:center;color:#5f6a65;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-align:center;line-height:2}
+  .hero-band{position:relative;z-index:2;border-top:1px solid var(--line-d)}
+  .hero-band::before{content:"";position:absolute;top:-1px;left:0;width:180px;height:2px;background:var(--green-l)}
+  .band-in{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding:30px 0}
+  .band-in div b{display:block;font-size:22px;font-weight:700;color:#fff}
+  .band-in div small{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#7f8781}
+
+  /* SOBRE */
+  section{padding:100px 0}
+  .about{display:grid;grid-template-columns:1fr 1.4fr;gap:70px;align-items:start}
+  h2{font-size:clamp(28px,3.2vw,38px);font-weight:700;letter-spacing:-.6px;line-height:1.2;margin-top:18px}
+  .about p{font-size:15px;line-height:1.85;color:var(--body);margin-bottom:18px}
+  .about .serif-quote{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;line-height:1.5;color:var(--green);border-left:2px solid var(--green-l);padding-left:22px;margin:28px 0}
+
+  /* EMPRESAS */
+  .dark-sec{background:var(--dark);color:#fff}
+  .dark-sec h2{color:#fff}
+  .ventures{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:52px}
+  .venture{background:rgba(255,255,255,.03);border:1px solid var(--line-d);padding:40px 36px;position:relative;transition:.25s;display:flex;flex-direction:column;gap:14px}
+  .venture::before{content:"";position:absolute;top:0;left:0;width:56px;height:2px;background:var(--green-l);transition:.3s}
+  .venture:hover{background:rgba(255,255,255,.05);border-color:rgba(64,145,108,.45)}
+  .venture:hover::before{width:100%}
+  .venture small{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:#8f9691;font-weight:600}
+  .venture h3{font-size:22px;font-weight:700;letter-spacing:-.3px}
+  .venture p{font-size:14px;line-height:1.7;color:#a7ada9;flex:1}
+  .venture a{font-size:12.5px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--green-l)}
+  .venture a:hover{color:#fff}
+
+  /* SERVICIOS */
+  .serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+  .serv{background:#fff;border:1px solid var(--line-l);border-top:2px solid var(--green);padding:34px 30px}
+  .serv h3{font-size:16.5px;font-weight:700;margin-bottom:12px}
+  .serv p{font-size:13.5px;line-height:1.7;color:var(--body)}
+  .serv .num{font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--green-l);font-style:italic;display:block;margin-bottom:14px}
+
+  /* CONTENIDO */
+  .content-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+  .post{background:var(--card);border:1px solid var(--line-l);padding:30px;display:flex;flex-direction:column;gap:12px;transition:.2s}
+  .post:hover{border-color:var(--green-m);transform:translateY(-3px)}
+  .post small{font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--green-m);font-weight:600}
+  .post h3{font-size:16px;font-weight:600;line-height:1.45}
+  .post span{font-size:12px;color:var(--muted);margin-top:auto}
+
+  /* CONTACTO */
+  .contact{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+  .contact-list{display:grid;gap:0;margin-top:36px}
+  .c-row{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--line-d)}
+  .c-row small{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#7f8781}
+  .c-row a,.c-row b{font-size:15px;color:#fff;font-weight:500}
+  .c-row a:hover{color:var(--green-l)}
+  .contact p{color:#a7ada9;font-size:15px;line-height:1.8;margin-top:18px}
+
+  footer{background:#0B0F0E;color:#6d736f;padding:34px 0;font-size:12px;position:relative}
+  footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--green-l);opacity:.5}
+  .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  @media(max-width:900px){
+    .nav-links{display:none}
+    .hero-grid,.about,.contact{grid-template-columns:1fr}
+    .portrait{display:none}
+    .band-in{grid-template-columns:1fr 1fr}
+    .ventures,.serv-grid,.content-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="#" class="mark">ANDRÉS TORRES-CALDERÓN<span>.</span></a>
+    <div class="nav-links">
+      <a href="#sobre">Sobre mí</a>
+      <a href="#empresas">Empresas</a>
+      <a href="#servicios">Cómo ayudo</a>
+      <a href="#contenido">Contenido</a>
+    </div>
+    <a class="btn btn-line" href="#contacto">Contacto</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="label light">Banca de Inversión · M&amp;A · Perú &amp; LATAM</div>
+      <h1>Andrés <b>Torres-Calderón</b></h1>
+      <div class="hero-role serif">Fundador de Alto Capitals y Alto Negocios</div>
+      <p class="hero-sub">Ayudo a empresarios y Pymes a comprar, vender y financiar empresas: estructuro operaciones de M&amp;A y financiamiento alternativo con estándares de banca de inversión y trato directo.</p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="#contacto">Agendar una reunión</a>
+        <a class="btn btn-line" href="#empresas">Conocer mis empresas</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="portrait-box">Foto profesional<br>Andrés Torres-Calderón</div>
+    </div>
+  </div>
+  <div class="wrap hero-band">
+    <div class="band-in">
+      <div><b>USD 45M+</b><small>En transacciones</small></div>
+      <div><b>120+</b><small>Mandatos y oportunidades</small></div>
+      <div><b>500+</b><small>Inversionistas en red</small></div>
+      <div><b>3</b><small>Empresas fundadas</small></div>
+    </div>
+  </div>
+</header>
+
+<section id="sobre">
+  <div class="wrap about">
+    <div>
+      <div class="label">Sobre mí</div>
+      <h2>Estrategia, cierre de operaciones y atención directa al cliente</h2>
+    </div>
+    <div>
+      <p>Soy fundador de Alto Capitals, boutique de banca de inversión enfocada en soluciones financieras y M&amp;A para empresas medianas, y de Alto Negocios, la plataforma digital para la compra y venta de negocios en Perú y Latinoamérica.</p>
+      <p>Mi trabajo está en la intersección de tres cosas: encontrar la oportunidad correcta, estructurarla con rigor financiero y acompañar personalmente a cada cliente hasta el cierre. Sin intermediarios innecesarios, con total confidencialidad.</p>
+      <div class="serif-quote">"Cada empresa tiene un comprador correcto y un precio justo. Mi trabajo es que ambos se encuentren."</div>
+    </div>
+  </div>
+</section>
+
+<section class="dark-sec" id="empresas">
+  <div class="wrap">
+    <div class="label light">Empresas</div>
+    <h2>Un ecosistema para comprar, vender y financiar empresas</h2>
+    <div class="ventures">
+      <div class="venture">
+        <small>Banca de Inversión</small>
+        <h3>Alto Capitals</h3>
+        <p>Boutique de banca de inversión: mandatos sell-side y buy-side, valorizaciones, financiamiento alternativo y asesoría estratégica para empresas medianas en LATAM.</p>
+        <a href="https://www.altocapitals.com">altocapitals.com →</a>
+      </div>
+      <div class="venture">
+        <small>Marketplace de M&amp;A</small>
+        <h3>Alto Negocios</h3>
+        <p>La plataforma líder para la compra y venta de negocios en Perú y la región. Oportunidades verificadas, procesos confidenciales y respaldo de banca de inversión. Antes altbiz.app.</p>
+        <a href="https://www.altonegocios.com">altonegocios.com →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="label">Cómo ayudo</div>
+    <h2>Tres formas de trabajar conmigo</h2>
+    <div class="serv-grid">
+      <div class="serv">
+        <span class="num">01</span>
+        <h3>Vender tu empresa</h3>
+        <p>Mandato de venta completo: valorización, teaser, salida confidencial al mercado, negociación y cierre con inversionistas calificados.</p>
+      </div>
+      <div class="serv">
+        <span class="num">02</span>
+        <h3>Comprar o invertir</h3>
+        <p>Acceso a oportunidades verificadas en Perú y LATAM, con due diligence y estructuración profesional de la operación.</p>
+      </div>
+      <div class="serv">
+        <span class="num">03</span>
+        <h3>Financiar tu crecimiento</h3>
+        <p>Soluciones de financiamiento alternativo para Pymes: deuda privada, capital y estructuras a la medida de tu flujo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contenido" style="padding-top:0">
+  <div class="wrap">
+    <div class="label">Contenido</div>
+    <h2>Ideas sobre M&amp;A y empresa en LATAM</h2>
+    <div class="content-grid">
+      <a class="post" href="#">
+        <small>LinkedIn</small>
+        <h3>Qué mira un inversionista antes de comprar una Pyme peruana</h3>
+        <span>Artículo →</span>
+      </a>
+      <a class="post" href="#">
+        <small>Newsletter</small>
+        <h3>Oportunidades de la semana: negocios en venta verificados</h3>
+        <span>Suscribirse →</span>
+      </a>
+      <a class="post" href="#">
+        <small>Guía</small>
+        <h3>Cómo preparar tu empresa para venderla al mejor precio</h3>
+        <span>Leer →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="dark-sec" id="contacto">
+  <div class="wrap contact">
+    <div>
+      <div class="label light">Contacto</div>
+      <h2>Conversemos sobre tu próxima operación</h2>
+      <p>Reuniones online de preferencia. Respondo personalmente cada mensaje relacionado a mandatos de venta, compra o financiamiento.</p>
+    </div>
+    <div class="contact-list">
+      <div class="c-row"><small>Email</small><a href="mailto:andres@altocapitals.com">andres@altocapitals.com</a></div>
+      <div class="c-row"><small>WhatsApp</small><a href="https://wa.me/51978721933">+51 978 721 933</a></div>
+      <div class="c-row"><small>LinkedIn</small><a href="https://www.linkedin.com/company/altocapitals">/altocapitals</a></div>
+      <div class="c-row"><small>Oficina</small><b>Ca. Tarata 278 int 71, Miraflores, Lima</b></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>© 2026 Andrés Torres-Calderón — Todos los derechos reservados.</span>
+    <span>altocapitals.com · altonegocios.com</span>
+  </div>
+</footer>
+
+</body>
+</html>
